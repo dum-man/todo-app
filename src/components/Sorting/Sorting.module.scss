@@ -1,0 +1,20 @@
+.sortList {
+  width: 1000px;
+  padding: 0 20px;
+  display: flex;
+}
+
+.sortItem {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.sortButton {
+  padding: 0;
+  font-size: 16px;
+}
+
+.active {
+  text-shadow: 1px 0 0 var(--color-black);
+}

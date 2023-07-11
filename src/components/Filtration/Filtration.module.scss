@@ -1,0 +1,18 @@
+.filterList {
+  width: 1000px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filterButton {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.active {
+  text-shadow: 1px 0 0 var(--color-black);
+}

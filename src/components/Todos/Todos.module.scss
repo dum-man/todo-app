@@ -1,0 +1,15 @@
+.container {
+  width: 1000px;
+  padding: 20px;
+}
+
+.todoList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 10px 0;
+}
+
+.loading {
+  margin-top: 160px;
+}

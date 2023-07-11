@@ -1,0 +1,154 @@
+.container {
+  grid-row: 1 / 3;
+  width: 210px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  padding-top: 10px;
+  border-radius: 15px;
+  box-shadow: 0 9px 38px 0 rgba(0, 17, 45, 0.12);
+}
+
+.line {
+  width: 100%;
+  height: 10px;
+  display: inline-block;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoDescription {
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  resize: none;
+  border: none;
+  overflow: auto;
+  &:focus {
+    outline: 1px solid var(--color-black);
+  }
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.dateWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dateButton {
+  align-self: flex-start;
+  padding: 0;
+  font-size: 11px;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.repeatingDays {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dayButton {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  font-size: 12px;
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.daySelected {
+  opacity: 1;
+}
+
+.divider {
+  height: 2px;
+  margin-bottom: 20px;
+  background-color: var(--color-black);
+}
+
+.colorTitle {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.colorItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.colorButton {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.button {
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.saveButton {
+  margin-top: auto;
+  border-color: var(--color-black);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.deleteButton {
+  font-size: 10px;
+  color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.black {
+  background-color: var(--color-black);
+}
+
+.gold {
+  background-color: var(--color-gold);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.fuchsia {
+  background-color: var(--color-fuchsia);
+}
+
+.red {
+  background-color: var(--color-red);
+}
