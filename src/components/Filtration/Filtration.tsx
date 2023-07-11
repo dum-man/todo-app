@@ -24,6 +24,13 @@ const Filtration: React.FC = () => {
     dispatch(setFilterType(type));
   };
 
+  const allTodosNum = getAllTodosNum(todos);
+  const expiredTodosNum = getExpiredTodosNum(todos);
+  const todayTodosNum = getTodayTodosNum(todos);
+  const favoriteTodosNum = getFavoriteTodosNum(todos);
+  const repeatingTodosNum = getRepeatingTodosNum(todos);
+  const archivedTodosNum = getArchivedTodosNum(todos);
+
   return (
     <ul className={styles.filterList}>
       <li>
@@ -31,9 +38,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "all",
           })}
+          disabled={allTodosNum === 0}
           onClick={() => handleSetFilterType("all")}
         >
-          ALL {getAllTodosNum(todos)}
+          ALL {allTodosNum}
         </button>
       </li>
       <li>
@@ -41,9 +49,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "overdue",
           })}
+          disabled={expiredTodosNum === 0}
           onClick={() => handleSetFilterType("overdue")}
         >
-          OVERDUE {getExpiredTodosNum(todos)}
+          OVERDUE {expiredTodosNum}
         </button>
       </li>
       <li>
@@ -51,9 +60,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "today",
           })}
+          disabled={todayTodosNum === 0}
           onClick={() => handleSetFilterType("today")}
         >
-          TODAY {getTodayTodosNum(todos)}
+          TODAY {todayTodosNum}
         </button>
       </li>
       <li>
@@ -61,9 +71,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "favorites",
           })}
+          disabled={favoriteTodosNum === 0}
           onClick={() => handleSetFilterType("favorites")}
         >
-          FAVORITES {getFavoriteTodosNum(todos)}
+          FAVORITES {favoriteTodosNum}
         </button>
       </li>
       <li>
@@ -71,9 +82,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "repeating",
           })}
+          disabled={repeatingTodosNum === 0}
           onClick={() => handleSetFilterType("repeating")}
         >
-          REPEATING {getRepeatingTodosNum(todos)}
+          REPEATING {repeatingTodosNum}
         </button>
       </li>
       <li>
@@ -81,9 +93,10 @@ const Filtration: React.FC = () => {
           className={classNames(styles.filterButton, {
             [styles.active]: filterType === "archive",
           })}
+          disabled={archivedTodosNum === 0}
           onClick={() => handleSetFilterType("archive")}
         >
-          ARCHIVE {getArchivedTodosNum(todos)}
+          ARCHIVE {archivedTodosNum}
         </button>
       </li>
     </ul>
